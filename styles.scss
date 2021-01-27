@@ -1,0 +1,72 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  user-select: none;
+}
+::-webkit-scrollbar {
+  background: rgb(129, 108, 91);
+}
+::-webkit-scrollbar-thumb {
+  background: #292929;
+  border-radius: 1em;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Special+Elite&display=swap');
+body {
+  font-family: 'Special Elite', cursive;
+  width: 100%;
+  background-color: #816c5b;
+
+  $general-text-color: #292929;
+  $bright-text-color: #eb9f83;
+  $blue-background: #234057;
+  $gentle-white: #dadada;
+  $transition-time: 500ms;
+
+  .book-appointment {
+    background-color: $blue-background;
+    padding: 0.5em;
+    border-radius: 0.5em;
+    border: black solid 0.1em;
+    cursor: pointer;
+    text-decoration: none;
+    color: $bright-text-color;
+    box-shadow: 0.25em 0.25em $general-text-color;
+    transition: $transition-time;
+    &:hover {
+      font-size: 1.5em;
+      box-shadow: black 0.25em 0.5em;
+      border-color: $general-text-color;
+    }
+  }
+
+  $nav-mobile-box-breakpoint: 560px;
+  .mobile-nav-box {
+    transition: 1s;
+    z-index: 3;
+    display: none;
+    height: 110vh;
+    width: 0vw;
+    background-color: $general-text-color;
+
+    position: fixed;
+    right: 0;
+    top: 0;
+
+    @media (max-width: $nav-mobile-box-breakpoint) {
+      display: block;
+    }
+  }
+
+  @import './scssFiles/_nav';
+  @import './scssFiles/_landing.scss';
+  @import './scssFiles/_description.scss';
+  @import './scssFiles/_services';
+  @import './scssFiles/_footer';
+}
