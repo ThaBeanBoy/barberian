@@ -31,9 +31,9 @@ window.addEventListener('scroll', () => {
   parellex('#other-black-guy', -0.8);
   parellex('#asian-dude', 0.1);
 
+  //text animtions
   showText('#para1', innerHeight_calc(0.21), false);
   showText('#para2', innerHeight_calc(0.79), false);
-  //630
   showText('#cuts-services', innerHeight_calc(1.75), true);
   showText('#products-services', innerHeight_calc(1.75), true);
 
@@ -41,6 +41,15 @@ window.addEventListener('scroll', () => {
   if (landing_Completion <= 1) {
     const newBackground = `rgba(129, 108, 91, ${landing_Completion})`;
     const newBorder = `solid 0.1em rgba(41, 41, 41, ${landing_Completion})`;
+
+    nav.backgroundColor = newBackground;
+    nav.border = newBorder;
+
+    logo.backgroundColor = newBackground;
+    logo.border = newBorder;
+  } else {
+    const newBackground = `rgba(129, 108, 91, 1)`;
+    const newBorder = `solid 0.1em rgba(41, 41, 41, 1)`;
 
     nav.backgroundColor = newBackground;
     nav.border = newBorder;
@@ -61,6 +70,7 @@ open_nav_button.addEventListener('click', () => {
     //Opening nav
     is_nav_open = true;
     nav_box.style.width = '70vw';
+    nav_box.style.paddingLeft = '1.5em';
 
     hamburg2.style.opacity = '0';
     setTimeout(() => {
@@ -71,6 +81,7 @@ open_nav_button.addEventListener('click', () => {
     //Closing nav
     is_nav_open = false;
     nav_box.style.width = '0vw';
+    nav_box.style.paddingLeft = '0em';
 
     hamburg1.style.transform = 'translate(0, -35%) rotate(0deg)';
     hamburg3.style.transform = 'translate(0, 35%) rotate(0deg)';

@@ -37,12 +37,14 @@
         top: $top;
         left: $left;
         transform: translate(-$left, -$top);
+        text-align: left;
       }
 
       #para2 {
         bottom: $top;
         right: $left;
         transform: translate($left, $top);
+        text-align: right;
       }
     }
   }

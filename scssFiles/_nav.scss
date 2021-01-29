@@ -19,6 +19,7 @@
     padding: 0.25em;
     background-color: rgba(129, 108, 91, 0);
     border: solid 0.1em rgba(41, 41, 41, 0);
+    z-index: 0;
     /* height: 15vw; */
 
     display: flex;
@@ -29,7 +30,7 @@
 
     img {
       /* width: 15vw; */
-      height: 3.5vw;
+      height: 2rem;
     }
 
     .icon-name {

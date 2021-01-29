@@ -51,25 +51,6 @@ body .book-appointment:hover {
   border-color: #292929;
 }
 
-body .mobile-nav-box {
-  -webkit-transition: 1s;
-  transition: 1s;
-  z-index: 3;
-  display: none;
-  height: 110vh;
-  width: 0vw;
-  background-color: #292929;
-  position: fixed;
-  right: 0;
-  top: 0;
-}
-
-@media (max-width: 560px) {
-  body .mobile-nav-box {
-    display: block;
-  }
-}
-
 body .top {
   z-index: 3;
   width: 100vw;
@@ -97,6 +78,7 @@ body .top .logo {
   padding: 0.25em;
   background-color: rgba(129, 108, 91, 0);
   border: solid 0.1em rgba(41, 41, 41, 0);
+  z-index: 0;
   /* height: 15vw; */
   display: -webkit-box;
   display: -ms-flexbox;
@@ -116,7 +98,7 @@ body .top .logo {
 
 body .top .logo img {
   /* width: 15vw; */
-  height: 3.5vw;
+  height: 2rem;
 }
 
 body .top .logo .icon-name {
@@ -210,11 +192,72 @@ body .top .display-parent-responsive .open-nav #ham3 {
           transform: translateY(35%);
 }
 
-@media (max-width: 560px) {
+@media (max-width: 561px) {
   body .top .desktop-nav {
     display: none;
   }
   body .top .display-parent-responsive {
+    display: block;
+  }
+}
+
+body .mobile-nav-box {
+  -webkit-transition: 1s;
+  transition: 1s;
+  z-index: 3;
+  display: none;
+  height: 110vh;
+  padding-top: 5em;
+  width: 0vw;
+  background-color: #292929;
+  overflow: hidden;
+  position: fixed;
+  right: 0;
+  top: 0;
+}
+
+body .mobile-nav-box a {
+  color: #dadada;
+  text-decoration: none;
+  word-wrap: none;
+}
+
+body .mobile-nav-box .main-links a {
+  font-size: 1.75em;
+  display: block;
+  margin: 1em 0;
+  width: auto;
+}
+
+body .mobile-nav-box .main-links .book-appointment {
+  color: #eb9f83;
+}
+
+body .mobile-nav-box .social-links {
+  position: absolute;
+  bottom: 15%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -15%);
+          transform: translate(-50%, -15%);
+  width: 100%;
+  padding: 0em 1.5em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+body .mobile-nav-box .social-links i {
+  font-size: 1.75em;
+}
+
+@media (max-width: 561px) {
+  body .mobile-nav-box {
     display: block;
   }
 }
@@ -280,6 +323,10 @@ body .landing .content .message .sub-message {
   margin: 1em 0;
 }
 
+body .landing .content .message .book-appointment {
+  font-size: 1.5rem;
+}
+
 body .description {
   height: 120vh;
   width: 100%;
@@ -328,12 +375,14 @@ body .description .description-content .paragraph {
     left: 25%;
     -webkit-transform: translate(-25%, -10%);
             transform: translate(-25%, -10%);
+    text-align: left;
   }
   body .description .description-content #para2 {
     bottom: 10%;
     right: 25%;
     -webkit-transform: translate(25%, 10%);
             transform: translate(25%, 10%);
+    text-align: right;
   }
 }
 
@@ -428,6 +477,7 @@ body .services .sevice-box {
   transition: 1s;
   z-index: 2;
   width: 37%;
+  max-width: 390px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
